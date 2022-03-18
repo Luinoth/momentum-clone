@@ -1,0 +1,207 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  background-image: none;
+  background-color: cornflowerblue;
+  color: white;
+}
+ul,li{
+  list-style: none;
+}
+
+.align_center{
+  text-align: center;
+}
+.hidden{
+  display: none;
+}
+.small_text{
+  font-size: 75%;
+}
+
+/* 컨테이너 */
+
+#container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* 배경 이미지 */
+
+#bgImage{
+  position: absolute;
+  width: 69%;
+  height: 80vh;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-bottom: -10px;
+  object-fit:cover;
+}
+
+/* 로그인 폼 */
+
+#Login_form{
+  position:absolute;
+  left: 70%;
+  top: 4%;
+}
+#Login_form input{
+  color: white;
+  border: none;
+  background: none;
+  width: 150px;
+  height: 4rem;
+  border-bottom: 3px solid white;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+#Login_form input::placeholder{
+  color: white;
+}
+#Login_form button{
+  border: none;
+  width: 70px;
+  height: 40px;
+  margin-left: -5px;
+  font-size: 200%;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+#Login_form button:hover{
+  color: orangered;
+}
+
+/* 닉네임 + 시계 */
+
+#greetings_container{
+  width: 30%;
+  height: 10%;
+  position:absolute;
+  left: 70%;
+  top: 9%;
+  transform: translateY(-100%);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: flex-end;
+}
+#greetings{
+  display: inline-block;
+  font-size: 3rem;
+}
+#clock{
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+/* 오늘의 플레이리스트 */
+
+#playlist iframe{
+  width: 20%;
+  height: 8%;
+  position: absolute;
+  bottom: 5%;
+  left: 0.5rem;
+  transform: translateY(50%);
+}
+
+/* 기타 링크모음 */
+
+#linklist{
+  width: 48%;
+  height: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  position: absolute;
+  left: 20%;
+  bottom:5%;
+  transform: translateY(50%);
+  margin-left: 1rem;
+}
+.icon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+}
+.icon:hover{
+  opacity: .6;
+}
+
+/* 투두리스트 */
+
+#todoForm input{
+  font-size: 1.6rem;
+  color: white;
+  width: 20%;
+  height: 3rem;
+  background:none;
+  border: none;
+  border-bottom: 2px solid white;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
+#todoForm input::placeholder{
+  font-size: 1.6rem;
+  color: white;
+}
+#todoList{
+  width: 20%;
+  position: absolute;
+  left: 70%;
+  top: 15%;
+}
+#todoList li{
+  font-size: 1.6rem;
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 0.5rem;
+}
+#todoList button{
+  background: none;
+  box-shadow: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#todoList button:hover{
+  color: orangered;
+}
+
+/* 날씨 */
+
+#weather{
+  width: 20%;
+  height: 8%;
+  position: absolute;
+  top: 5%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+#weather span{
+  display:inline-block;
+}
+#weather button{
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#weather button:hover{
+  color: orangered;
+}

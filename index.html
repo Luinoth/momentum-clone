@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentum</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- 컨테이너 -->
+  <div id="container">
+  <!-- 로그인 폼 -->
+  <form id="Login_form" class="hidden align_center">
+    <input type="text" maxlength="15" placeholder="이름" required >
+    <button>Log in</button>
+  </form>
+
+  <!-- 이름 + 시계 -->
+  <div id="greetings_container" class="hidden">
+    <h1 id="greetings"></h1>
+    <h2 id="clock"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second" class="small_text">00</span></h2>
+  </div>
+
+
+  <!-- 오늘의 플레이리스트 -->
+  <div id="playlist">
+    <span id="todays">
+      <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </span>
+  </div>
+
+  <!-- 기타 링크 모음 -->
+  <ul id="linklist">
+    <li>
+      <a target="_blank" href="https://www.google.co.kr/">
+        <img class="icon" src="image/icon/google_white.png">
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.youtube.com/">
+        <img class="icon" src="image/icon/youtube_white.png">
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://twitter.com/home">
+        <img class="icon" src="image/icon/twitter_white.png">
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.instagram.com/">
+        <img class="icon" src="image/icon/instagram_white.png">
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.notion.so/ko-kr">
+        <img class="icon" src="image/icon/notion_white.png">
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/">
+        <img class="icon" src="image/icon/github_white.png">
+      </a>
+    </li>
+  </ul>
+
+  <!-- 투두리스트 -->
+  <form id="todoForm">
+    <input type="text" placeholder="할 일을 적고 엔터를 눌러주세요.">
+  </form>
+  <ul id="todoList">
+  </ul>
+
+  <!-- 날씨 -->
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 컨테이너 닫는태그 -->
+  </div>
+
+  <!-- 자바스크립트 -->
+  <script src="js/greeting.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/playList.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/ToDo.js"></script>
+  <script src="js/weather.js"></script>
+
+</body>
+
+</html>
