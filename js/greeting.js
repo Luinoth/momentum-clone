@@ -2,6 +2,7 @@ const loginForm = document.querySelector('#Login_form');
 const loginInput = document.querySelector('#Login_form input');
 const greetings = document.querySelector('#greetings');
 const container = document.querySelector("#greetings_container");
+const clockBox = document.querySelector("#clock");
 
 function loginSubmit(event) {
   event.preventDefault();
@@ -14,6 +15,7 @@ function loginSubmit(event) {
 function printGreetings(username){
   greetings.innerText = `안녕, ${username}!`;
   container.classList.remove("hidden");
+  clockBox.classList.remove("flying");
 }
 
 const savedUsername = localStorage.getItem("username");

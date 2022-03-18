@@ -24,13 +24,19 @@ ul,li{
 .small_text{
   font-size: 75%;
 }
+.flying{
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
 
 /* 컨테이너 */
 
 #container{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 /* 배경 이미지 */
@@ -52,6 +58,7 @@ ul,li{
   position:absolute;
   left: 70%;
   top: 4%;
+  z-index: 10;
 }
 #Login_form input{
   color: white;
