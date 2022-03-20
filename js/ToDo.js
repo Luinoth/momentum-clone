@@ -19,11 +19,14 @@ function deleteTodo(event){
 
 function moreinfo(event){
   const list = event.target.parentElement;
-
+  const memo = list.querySelector("dd");
+  
   if(list.style.height == "16rem"){
     list.style.height = "3rem";
+    memo.style.opacity = "0";
   } else{
     list.style.height = "16rem";
+    memo.style.opacity = "1";
   }
 }
 
