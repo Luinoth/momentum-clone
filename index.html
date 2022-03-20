@@ -13,74 +13,90 @@
 
   <!-- 컨테이너 -->
   <div id="container">
-  <!-- 로그인 폼 -->
-  <form id="Login_form" class="hidden align_center">
-    <input type="text" maxlength="15" placeholder="이름" required autofocus>
-    <button>Log in</button>
-  </form>
+    <!-- 로그인 폼 -->
+    <form id="Login_form" class="hidden align_center">
+      <input type="text" maxlength="15" placeholder="이름" required autofocus>
+      <button>Log in</button>
+    </form>
 
-  <!-- 이름 + 시계 -->
-  <div id="greetings_container" class="hidden">
-    <h1 id="greetings"></h1>
-    <h2 id="clock" class="flying"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second" class="small_text">00</span></h2>
-  </div>
+    <!-- 이름 + 시계 -->
+    <div id="greetings_container" class="hidden">
+      <h1 id="greetings"></h1>
+      <h2 id="clock" class="flying"><span id="hour">00</span> : <span id="minute">00</span> : <span id="second"
+          class="small_text">00</span></h2>
+    </div>
 
 
-  <!-- 오늘의 플레이리스트 -->
-  <div id="playlist">
-    <span id="todays">
-      <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </span>
-  </div>
+    <!-- 오늘의 플레이리스트 -->
+    <div id="playlist">
+      <span id="todays">
+        <iframe src="" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </span>
+    </div>
 
-  <!-- 기타 링크 모음 -->
-  <ul id="linklist">
-    <li>
-      <a target="_blank" href="https://www.google.co.kr/">
-        <img class="icon" src="image/icon/google_white.png">
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.youtube.com/">
-        <img class="icon" src="image/icon/youtube_white.png">
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://twitter.com/home">
-        <img class="icon" src="image/icon/twitter_white.png">
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.instagram.com/">
-        <img class="icon" src="image/icon/instagram_white.png">
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.notion.so/ko-kr">
-        <img class="icon" src="image/icon/notion_white.png">
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://github.com/">
-        <img class="icon" src="image/icon/github_white.png">
-      </a>
-    </li>
-  </ul>
+    <!-- 기타 링크 모음 -->
+    <ul id="linklist">
+      <li>
+        <a target="_blank" href="https://www.google.co.kr/">
+          <img class="icon" src="image/icon/google_white.png" alt="구글 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.youtube.com/">
+          <img class="icon" src="image/icon/youtube_white.png" alt="유튜브 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://papago.naver.com/">
+          <img class="icon" src="image/icon/papago_white.png" alt="파파고 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/home">
+          <img class="icon" src="image/icon/twitter_white.png" alt="트위터 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.instagram.com/">
+          <img class="icon" src="image/icon/instagram_white.png" alt="인스타그램 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.notion.so/ko-kr">
+          <img class="icon" src="image/icon/notion_white.png" alt="노션 아이콘">
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/">
+          <img class="icon" src="image/icon/github_white.png" alt="깃허브 아이콘">
+        </a>
+      </li>
+    </ul>
 
-  <!-- 투두리스트 -->
-  <form id="todoForm">
-    <input type="text" placeholder="할 일을 적고 엔터를 눌러주세요.">
-  </form>
-  <ul id="todoList">
-  </ul>
+    <!-- 투두리스트 -->
+    <div class="right_container"><!-- 컨테이너 -->
+      <form id="todoForm">
+        <fieldset>
+          <legend>TO DO LIST</legend>
+          <input id="todoInput" type="text" maxlength="20" placeholder="할 일을 적어주세요." required>
+          <textarea id="memo" maxlength="100" placeholder=" 추가 메모(최대 100자)"></textarea>
+          <button type="submit" id="todoSubmit">SUBMIT</button>
+        </fieldset>
+      </form>
+      <h1 id="todolist_header" class="align_center header">TO DO LIST :P</h1>
+      <ul id="todoList">
+      </ul>
+    </div>
 
-  <!-- 날씨 -->
-  <div id="weather">
-    <span></span>
-    <span></span>
-  </div>
+    <!-- 날씨 -->
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
 
-  <!-- 컨테이너 닫는태그 -->
+    <!-- 컨테이너 닫는태그 -->
   </div>
 
   <!-- 자바스크립트 -->

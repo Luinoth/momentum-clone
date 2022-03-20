@@ -10,6 +10,14 @@ const playlist = [
 {
   link: "https://www.youtube-nocookie.com/embed/Jm5v-dZnYCs" ,
   //노마드코더 플레이리스트
+},
+{
+  link: "https://www.youtube.com/embed/iRnOsaaSPpo",
+  //동물의 숲 플레이리스트
+},
+{
+  link: "https://www.youtube.com/embed/f4ubpOqBBBI",
+  //ff14 플레이리스트
 }
 ];
 
