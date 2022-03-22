@@ -13,6 +13,21 @@
 
   <!-- 컨테이너 -->
   <div id="container">
+
+    <!-- 내비 -->
+    <ul id="navi">
+      <li>
+        <a href="#">
+          <img id="homeIcon" class="navi_icon" src="image/icon/home_white.png" alt="홈 화면">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img id="jsCanvasIcon" class="navi_icon" src="image/icon/brush_white.png" alt="그림판">
+        </a>
+      </li>
+    </ul>
+
     <!-- 로그인 폼 -->
     <form id="Login_form" class="hidden align_center">
       <input type="text" maxlength="15" placeholder="이름" required autofocus>
@@ -23,17 +38,17 @@
     <div id="greetings_container" class="hidden">
       <h1 id="greetings"></h1>
       <h2 id="clock" class="flying"><span id="hour">00</span> : <span id="minute">00</span> : <span id="second"
-          class="small_text">00</span></h2>
+          class="small_text">00</span>
+      </h2>
+      <img id="logout" class="flying" src="image/icon/Logout.png" alt="로그아웃 버튼">
     </div>
 
 
     <!-- 오늘의 플레이리스트 -->
     <div id="playlist">
-      <span id="todays">
-        <iframe src="" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </span>
+      <iframe src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
 
     <!-- 기타 링크 모음 -->
@@ -76,7 +91,7 @@
     </ul>
 
     <!-- 투두리스트 -->
-    <div class="right_container"><!-- 컨테이너 -->
+    <div id="todoContainer" class="right_container"><!-- 컨테이너 -->
       <form id="todoForm">
         <fieldset>
           <legend>TO DO LIST</legend>
@@ -91,9 +106,37 @@
     </div>
 
     <!-- 날씨 -->
+    <div id="weatherIcon">
+      <img>
+    </div>
     <div id="weather">
       <span></span>
       <span></span>
+    </div>
+
+    <!-- 캔버스 -->
+    <div id="canvasContainer">
+      <canvas id="jsCanvas" class="jsCanvas"></canvas>
+    </div>
+    <div id="controls" class="right_container">
+      <div id="rangeContainer">
+        <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1">
+      </div>
+      <div id="btns">
+        <button id="jsMode" type="button">Fill</button>
+        <button id="jsSave" type="button">Save</button>
+      </div>
+      <div id="colors">
+        <div class="color" style="background-color: #2c2c2c"></div>
+        <div class="color" style="background-color: white"></div>
+        <div class="color" style="background-color: red"></div>
+        <div class="color" style="background-color: orange"></div>
+        <div class="color" style="background-color: yellow"></div>
+        <div class="color" style="background-color: green"></div>
+        <div class="color" style="background-color: blue"></div>
+        <div class="color" style="background-color: navy"></div>
+        <div class="color" style="background-color: purple"></div>
+      </div>
     </div>
 
     <!-- 컨테이너 닫는태그 -->
@@ -106,6 +149,8 @@
   <script src="js/background.js"></script>
   <script src="js/ToDo.js"></script>
   <script src="js/weather.js"></script>
+  <scropt src="js/paint.js"></scropt>
+  <script src="js/navi.js"></script>
 
 </body>
 

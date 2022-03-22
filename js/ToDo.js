@@ -31,27 +31,29 @@ function moreinfo(event){
 }
 
 function paintTodo(newTodoObject) {
-  const list = document.createElement("li");
+  const list = document.createElement("li");//li태그
   list.id = newTodoObject.id;
-  const span = document.createElement("dt");
+
+  const span = document.createElement("dt");//투두리스트 제목
   span.innerText = newTodoObject.todo;
-  const checkBox = document.createElement("input");
-  checkBox.type =  "checkbox";
-  checkBox.id = "toggle";
-  checkBox.className = "hidden";
-  const toggle = document.createElement("label");
-  toggle.htmlFor = "toggle";
+
+  const toggle = document.createElement("button");//더보기버튼
+  toggle.id = "toggle";
   toggle.innerText = "＋";
   toggle.id = "more_info";
-  const memo = document.createElement("dd");
+
+  const memo = document.createElement("dd");//추가메모
   memo.className = "todo_memo";
   memo.innerText = newTodoObject.memo;
-  toggle.addEventListener("click", moreinfo);
-  const button = document.createElement("button");
+
+  toggle.addEventListener("click", moreinfo);//li 트랜지션
+
+  const button = document.createElement("button");//삭제버튼
+  button.id = "delete";
   button.innerText = "Ｘ";
   button.addEventListener("click", deleteTodo);
+
   list.appendChild(span);
-  list.appendChild(checkBox);
   list.appendChild(toggle);
   list.appendChild(button);
   list.appendChild(memo);

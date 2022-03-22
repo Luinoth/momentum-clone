@@ -40,6 +40,13 @@ ul,li{
   position: relative;
   overflow: hidden;
 }
+.right_container{
+  width: 23.5%;
+  height: 80vh;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+}
 
 /* 배경 이미지 */
 
@@ -54,12 +61,38 @@ ul,li{
   object-fit:cover;
 }
 
+/* 내비 */
+
+#navi{
+  width: 5%;
+  height: 30vh;
+  border-radius: 15px 0 0 15px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  background-color: rgba(255,255,255,.1);
+}
+.navi_icon{
+  width: 80%;
+  margin-left: 10%;
+}
+.navi_icon:hover{
+  opacity: .6;
+}
+.navi_icon:active{
+  transform: scale(.97);
+}
+
 /* 로그인 폼 */
 
 #Login_form{
   position:absolute;
   left: 70%;
-  top: 4%;
+  top: 3%;
   z-index: 10;
 }
 #Login_form input{
@@ -112,6 +145,16 @@ ul,li{
   font-size: 2.5rem;
   margin-left: 2rem;
 }
+#logout{
+  height: 2.5rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  margin-bottom: 0.25rem;
+  filter: grayscale(1) brightness(99);
+}
+#logout:hover{
+  filter: none;
+}
 
 /* 오늘의 플레이리스트 */
 
@@ -150,13 +193,6 @@ ul,li{
 
 /* 투두리스트 */
 
-.right_container{
-  width: 23.5%;
-  height: 80vh;
-  position: absolute;
-  top: 10%;
-  left: 70%;
-}
 #todoForm{
   width: 100%;
   height: 30vh;
@@ -191,6 +227,9 @@ ul,li{
 #todoSubmit:hover{
   background: rgba(255,255,255,.6);
 }
+#todoSubmit:active{
+  transform: scale(.97);
+}
 #todoForm textarea{
   width: 95%;
   height: 53%;
@@ -210,7 +249,7 @@ ul,li{
 #todoForm fieldset{
   width: 100%;
   height: 100%;
-  border: 1px dashed white;
+  border: 2px dashed white;
 }
 #todoForm legend{
   font-size: 1.6rem;
@@ -236,6 +275,7 @@ ul,li{
   top: 35vh;
   display: flex;
   flex-flow: column nowrap;
+  overflow-x: hidden;
   overflow-y: scroll;
   border-top: 3px solid rgba(255,255,255,.8);
   border-bottom: 3px solid rgba(255,255,255,.8);
@@ -256,6 +296,7 @@ ul,li{
   font-size: 1.6rem;
   transition: all 0.3s;
   border-bottom: 1px solid rgba(255,255,255,.6);
+  position: relative;
 }
 .todoList_toggle{
   height: 15rem;
@@ -269,6 +310,7 @@ ul,li{
   margin-left: 0.5rem;
 }
 #todoList li dd.todo_memo{
+  font-size: 90%;
   opacity: 0;
   width: 93%;
   height: 11rem;
@@ -276,8 +318,11 @@ ul,li{
   transition: all 0.2s;
 }
 #more_info{
-  font-size: 1.6rem;
-  line-height: 2.75rem;
+  color:white;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  background:none;
+  border:none;
   position: absolute;
   right: 3rem;
   cursor: pointer;
@@ -285,7 +330,7 @@ ul,li{
 #more_info:hover{
   color: orangered;
 }
-#todoList button{
+#delete{
   font-size: 1.6rem;
   line-height: 3rem;
   background: none;
@@ -296,23 +341,46 @@ ul,li{
   position: absolute;
   right: 1rem;
 }
-#todoList button:hover{
+#delete:hover{
   color: orangered;
 }
 
 /* 날씨 */
 
-#weather{
-  width: 20%;
-  height: 8%;
+#weatherIcon{
+  width: 5%;
+  height: 8vh;
   position: absolute;
   top: 5%;
   left: 0.5rem;
   transform: translateY(-50%);
+}
+#weatherIcon img{
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#weather{
+  width: 15%;
+  height: 8vh;
+  position: absolute;
+  top: 5%;
+  left: calc(5% + 1rem);
+  transform: translateY(-50%);
   font-size: 2rem;
 }
 #weather span{
+  height: 50%;
   display:inline-block;
+  position: absolute;
+}
+#weather span:first-child{
+  top: 0;
+}
+#weather span:last-child{
+  bottom: 0;
 }
 #weather button{
   font-size: 1.5rem;
@@ -324,4 +392,72 @@ ul,li{
 }
 #weather button:hover{
   color: orangered;
+}
+
+/* 캔버스 */
+
+#canvasContainer{
+  position: absolute;
+  width: 69%;
+  height: 80vh;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.jsCanvas{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+#controls{
+  border: 2px dashed white;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.1);
+}
+#rangeContainer{
+  width: 90%;
+  height: 5%;
+  display: inline-block;
+  margin-top: 1rem; 
+  margin-left: 5%;
+  position: relative;
+}
+#jsRange{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#btns{
+  width: 90%;
+  height: 10%;
+  display: inline-block;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
+#btns button{
+  padding: 1rem;
+  border: none;
+  background-color: white;
+  margin-right: 1rem;
+}
+#btns button:hover{
+  opacity: .6;
+}
+#btns button:active{
+  transform: scale(.9);
+}
+#colors{
+  width: 90%;
+  height: 10rem;
+  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5% 0 0 5%;
+}
+.color{
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  cursor: pointer;
 }
