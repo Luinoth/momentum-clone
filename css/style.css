@@ -501,6 +501,9 @@ ul,li{
     white-space: nowrap;
     margin: 0;
   }
+  .flying{
+    display: none;
+  }
   #todoContainer{
     top: 150px;
     width: 100%;
