@@ -28,8 +28,8 @@ ul,li{
 }
 .flying{
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 100vh;
+  left: 100vh;
 }
 
 /* 컨테이너 */
