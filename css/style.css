@@ -28,8 +28,8 @@ ul,li{
 }
 .flying{
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 100vh;
+  left: 100vh;
 }
 
 /* 컨테이너 */
@@ -465,7 +465,9 @@ ul,li{
 
 
 @media screen and (max-width: 1100px) {
-  #navi, #linklist, #canvasContainer, #controls, #bgImage, #playlist,#Login_form, #greetings, #logout{
+  #navi, #linklist, #canvasContainer, #controls, #bgImage,
+   #playlist,#Login_form, #greetings_container, #greetings,
+    #logout, #clock{
     display: none;
   }
   #container{
@@ -490,22 +492,8 @@ ul,li{
   #weather span{
     white-space: nowrap;
   }
-  #greetings_container{
-    height: 50px;
-    width: 200px;
-    top: 80px;
-    left: 60%;
-    transform: translateX(-50%);
-  }
-  #clock{
-    white-space: nowrap;
-    margin: 0;
-  }
-  .flying{
-    display: none;
-  }
   #todoContainer{
-    top: 150px;
+    top: 100px;
     width: 100%;
     left: 0;
   }
